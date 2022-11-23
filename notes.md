@@ -29,3 +29,4 @@ AWS Solutions Associate
     - 80: HTTP
     - 443: HTTPS
     - 3389: RDP (Remote Desktop Protocol Windows)
+* Security lists only allow traffic
