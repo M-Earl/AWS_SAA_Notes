@@ -23,3 +23,9 @@ AWS Solutions Associate
 * User Data: On boot code to run
 * Public IP can change on stop and start (Private IP stays the same)
 * t2.micro ---> t is instance class, 2 is version, micro is size
+* Ports to know:
+    - 21: FTP
+    - 22: SSH, SFTP
+    - 80: HTTP
+    - 443: HTTPS
+    - 3389: RDP (Remote Desktop Protocol Windows)
