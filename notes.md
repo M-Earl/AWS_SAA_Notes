@@ -34,3 +34,5 @@ AWS Solutions Associate
 * Elastic File System
     - Bursting: Throughput scales with system size
     - Provisioned: Throughput fixed at specified amount
+* RDS and Aurora and Elasticache
+    - Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
