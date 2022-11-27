@@ -36,3 +36,8 @@ AWS Solutions Associate
     - Provisioned: Throughput fixed at specified amount
 * RDS and Aurora and Elasticache
     - Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
+* Route 53
+    - A - hostname to IPv4
+    - AAAA - hostname to IPv6
+    - CNAME - hostname to hostname
+    - NS - name servers
