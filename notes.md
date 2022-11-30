@@ -31,13 +31,16 @@ AWS Solutions Associate
     - 3389: RDP (Remote Desktop Protocol Windows)
 * Security lists only allow traffic
 * EBS Multi-Attach is limited to 16 instances
-* Elastic File System
-    - Bursting: Throughput scales with system size
-    - Provisioned: Throughput fixed at specified amount
-* RDS and Aurora and Elasticache
-    - Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
-* Route 53
-    - A - hostname to IPv4
-    - AAAA - hostname to IPv6
-    - CNAME - hostname to hostname
-    - NS - name servers
+# Elastic File System
+* Bursting: Throughput scales with system size
+* Provisioned: Throughput fixed at specified amount
+# RDS and Aurora and Elasticache
+* Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
+# Route 53
+* A - hostname to IPv4
+* AAAA - hostname to IPv6
+* CNAME - hostname to hostname
+* NS - name servers
+* CNAME vs Alias:
+    - CNAME: Only for non-root domain (www.something.com)
+    - Alias: For non-root and root domain (something.com) 
