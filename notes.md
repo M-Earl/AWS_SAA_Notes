@@ -46,4 +46,5 @@ AWS Solutions Associate
     - Alias: For non-root and root domain (something.com) 
 # S3 Storage
 * S3 Buckets are regional (despite the global dropdown above)
-
+* S3 Select --> SQL query on the data
+* S3 Byte Range Fetch --> Get specific bytes of an S3 file
