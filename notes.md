@@ -44,3 +44,6 @@ AWS Solutions Associate
 * CNAME vs Alias:
     - CNAME: Only for non-root domain (www.something.com)
     - Alias: For non-root and root domain (something.com) 
+# S3 Storage
+* S3 Buckets are regional (despite the global dropdown above)
+
