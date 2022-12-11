@@ -48,3 +48,6 @@ AWS Solutions Associate
 * S3 Buckets are regional (despite the global dropdown above)
 * S3 Select --> SQL query on the data
 * S3 Byte Range Fetch --> Get specific bytes of an S3 file
+# Cloudfront
+* Cloudfront is great for static data in many places
+* S3 Cross Region Replication is great for dynamic data in a few places
