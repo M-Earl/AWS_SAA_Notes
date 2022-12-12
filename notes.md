@@ -51,3 +51,5 @@ AWS Solutions Associate
 # Cloudfront
 * Cloudfront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
+# DataSync
+* Maintains metadata
