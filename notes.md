@@ -53,3 +53,5 @@ AWS Solutions Associate
 * S3 Cross Region Replication is great for dynamic data in a few places
 # DataSync
 * Maintains metadata
+# SQS and SNS
+* SQS can add filter policies on its subscribers
