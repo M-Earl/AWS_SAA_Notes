@@ -55,3 +55,5 @@ AWS Solutions Associate
 * Maintains metadata
 # SQS and SNS
 * SQS can add filter policies on its subscribers
+# VPC
+* NAT gateways replaced NAT instances
