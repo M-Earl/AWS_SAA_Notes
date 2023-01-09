@@ -57,3 +57,5 @@ AWS Solutions Associate
 * SQS can add filter policies on its subscribers
 # VPC
 * NAT gateways replaced NAT instances
+* Default NACL allows everything
+* Clients connect to a defined port and get a response on an ephermal port
