@@ -32,6 +32,9 @@ AWS Solutions Associate
 * Security lists only allow traffic
 * EBS Multi-Attach is limited to 16 instances
 * Launch templates supercede launch configurations (more features). Launch templates are immutable and allow versions
+# AWS Lambda
+* Lambda ayers can be used to pull libraries/dependencies (up to 5 layers)
+* Lambda can be deployed as images
 # Elastic File System
 * Bursting: Throughput scales with system size
 * Provisioned: Throughput fixed at specified amount
