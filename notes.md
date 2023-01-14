@@ -49,8 +49,9 @@ AWS Solutions Associate
 * S3 Buckets are regional (despite the global dropdown above)
 * S3 Select --> SQL query on the data
 * S3 Byte Range Fetch --> Get specific bytes of an S3 file
-# Cloudfront
-* Cloudfront is great for static data in many places
+* Transfer acceleration - quicker upload into S3 by leveraging CloudFront edge locations
+# CloudFront
+* CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
 # DataSync
 * Maintains metadata
@@ -62,6 +63,7 @@ AWS Solutions Associate
 * Clients connect to a defined port and get a response on an ephermal port
 * To access an S3 bucket, Gateway Endpoint is preferred over Instance Endpoint (unless on-prem resources)
 * VPC Peering - connect different VPCs together (not transitive)
+* Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
