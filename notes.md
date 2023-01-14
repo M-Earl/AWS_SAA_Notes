@@ -70,3 +70,5 @@ AWS Solutions Associate
     - Pilot Light
     - Warm Standby
     - Multi-Site
+# Security
+* AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
