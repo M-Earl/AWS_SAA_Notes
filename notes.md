@@ -32,6 +32,10 @@ AWS Solutions Associate
 * Security lists only allow traffic
 * EBS Multi-Attach is limited to 16 instances
 * Launch templates supercede launch configurations (more features). Launch templates are immutable and allow versions
+* EC2 placement groups:
+    - Cluster – packs instances close together inside an Availability Zone. Low-latency, HPC
+    - Partition – spreads your instances across logical partitions. Typically used by large distributed and replicated workloads, such as Hadoop, Cassandra, and Kafka.
+    - Spread – strictly places a small group of instances across distinct underlying hardware
 # AWS Lambda
 * Lambda ayers can be used to pull libraries/dependencies (up to 5 layers)
 * Lambda can be deployed as images
