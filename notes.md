@@ -60,6 +60,7 @@ AWS Solutions Associate
 * Default NACL allows everything
 * Clients connect to a defined port and get a response on an ephermal port
 * To access an S3 bucket, Gateway Endpoint is preferred over Instance Endpoint (unless on-prem resources)
+* VPC Peering - connect different VPCs together (not transitive)
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
