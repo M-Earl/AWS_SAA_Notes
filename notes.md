@@ -31,6 +31,7 @@ AWS Solutions Associate
     - 3389: RDP (Remote Desktop Protocol Windows)
 * Security lists only allow traffic
 * EBS Multi-Attach is limited to 16 instances
+* Launch templates supercede launch configurations (more features). Launch templates are immutable and allow versions
 # Elastic File System
 * Bursting: Throughput scales with system size
 * Provisioned: Throughput fixed at specified amount
