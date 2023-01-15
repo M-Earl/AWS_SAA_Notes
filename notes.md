@@ -20,7 +20,7 @@ AWS Solutions Associate
     "Principal": XXX,
 }
 # EC2 Instances
-* User Data: On boot code to run
+* User Data: On boot code to run (default : not on restart)
 * Public IP can change on stop and start (Private IP stays the same)
 * t2.micro ---> t is instance class, 2 is version, micro is size
 * Ports to know:
@@ -42,8 +42,10 @@ AWS Solutions Associate
 # Elastic File System
 * Bursting: Throughput scales with system size
 * Provisioned: Throughput fixed at specified amount
-# RDS and Aurora and Elasticache
+# Amazon DBs
 * Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
+* Amazon Redshift Spectrum - get data from S3 without importing
+* DynamoDB Accelerator (DAX) is a cache for DynamoDB
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -65,12 +67,16 @@ AWS Solutions Associate
 # SQS and SNS
 * SQS can add filter policies on its subscribers
 # VPC
+* VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
+* Gateway endpoints can only run S3 and DynamoDB
 * NAT gateways replaced NAT instances
 * Default NACL allows everything
 * Clients connect to a defined port and get a response on an ephermal port
 * To access an S3 bucket, Gateway Endpoint is preferred over Instance Endpoint (unless on-prem resources)
 * VPC Peering - connect different VPCs together (not transitive)
 * Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
+* AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
+* AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible)
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
