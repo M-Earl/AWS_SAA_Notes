@@ -66,6 +66,12 @@ AWS Solutions Associate
 * Maintains metadata
 # SQS and SNS
 * SQS can add filter policies on its subscribers
+* FIFO queues support up to 300 messages per second or 3,000 messages per second with batching
+* SQS non-FIFO has almost unlimited throughput
+# Kinesis Data Streams / Firehose
+* Kinesis Data Firehose writes to S3, Redshift, Elasticsearch, HTTP or 3rd party apps (datadog, splunk, etc)
+* Kinesis Data Streams - applications consume data streams (for example, containers or lambda)
+* A single Kinesis Data Stream shard shard can ingest up to 1 MB of data per second (including partition keys) or 1,000 records per second for writes
 # VPC
 * VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
 * Gateway endpoints can only run S3 and DynamoDB
