@@ -59,6 +59,8 @@ AWS Solutions Associate
 * S3 Select --> SQL query on the data
 * S3 Byte Range Fetch --> Get specific bytes of an S3 file
 * Transfer acceleration - quicker upload into S3 by leveraging CloudFront edge locations
+* In governance mode, users need special permissions to overwrite. In compliance mode, a specified object can’t be overwritten by any user
+* Legal holds are indefinite locks that supercede retention periods
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -70,7 +72,7 @@ AWS Solutions Associate
 * SQS non-FIFO has almost unlimited throughput
 # Kinesis Data Streams / Firehose
 * Kinesis Data Firehose writes to S3, Redshift, Elasticsearch, HTTP or 3rd party apps (datadog, splunk, etc)
-* Kinesis Data Streams - applications consume data streams (for example, containers or lambda)
+* Kinesis Data Streams - applications consume data streams (for example, containers or lambda) (1/MB/s/shard in, 2 MB/s/shard out unless fan-out)
 * A single Kinesis Data Stream shard shard can ingest up to 1 MB of data per second (including partition keys) or 1,000 records per second for writes
 # VPC
 * VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
@@ -83,6 +85,7 @@ AWS Solutions Associate
 * Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
 * AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
 * AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible)
+* VPC Sharing - share subnets with other accounts
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
