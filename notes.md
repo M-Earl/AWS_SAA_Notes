@@ -46,6 +46,7 @@ AWS Solutions Associate
 * Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
 * Amazon Redshift Spectrum - get data from S3 without importing
 * DynamoDB Accelerator (DAX) is a cache for DynamoDB
+* Enhanced monitoring is a feature of RDS
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -61,6 +62,8 @@ AWS Solutions Associate
 * Transfer acceleration - quicker upload into S3 by leveraging CloudFront edge locations
 * In governance mode, users need special permissions to overwrite. In compliance mode, a specified object can’t be overwritten by any user
 * Legal holds are indefinite locks that supercede retention periods
+* DataSync - Migrate on-premises data to AWS
+* Storage Gateway - create hybrid storage solution
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -86,6 +89,8 @@ AWS Solutions Associate
 * AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
 * AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible)
 * VPC Sharing - share subnets with other accounts
+* Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships.
+* AWS Control Tower - handles security of multiple accounts and services
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
@@ -94,3 +99,12 @@ AWS Solutions Associate
     - Multi-Site
 # Security
 * AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
+* AWS shield is used to protect against DDoS
+* AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
+* AWS Security Token Service - temporary credentials
+* AWS Certificate Manager (ACM) handles SSL/TLS
+# Other Services
+* Amazon Kendra - add search services
+* Amazon Polly - turns text into speech
+* AWS Proton - deploy containers
+* AWS Prometheus - monitoring and alerting service for containers
