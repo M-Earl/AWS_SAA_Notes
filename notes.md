@@ -36,9 +36,10 @@ AWS Solutions Associate
     - Cluster – packs instances close together inside an Availability Zone. Low-latency, HPC
     - Partition – spreads your instances across logical partitions. Typically used by large distributed and replicated workloads, such as Hadoop, Cassandra, and Kafka.
     - Spread – strictly places a small group of instances across distinct underlying hardware
+* Elastic IP - mask failure by rapidly remapping the address to another instance in your account
 # AWS Lambda
-* Lambda ayers can be used to pull libraries/dependencies (up to 5 layers)
-* Lambda can be deployed as images
+* Lambda layers can be used to pull libraries/dependencies (up to 5 layers)
+* Lambda can be deployed as containers
 # Elastic File System
 * Bursting: Throughput scales with system size
 * Provisioned: Throughput fixed at specified amount
@@ -99,7 +100,7 @@ AWS Solutions Associate
     - Multi-Site
 # Security
 * AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
-* AWS shield is used to protect against DDoS
+* AWS Shield is used to protect against DDoS
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
 * AWS Security Token Service - temporary credentials
 * AWS Certificate Manager (ACM) handles SSL/TLS
