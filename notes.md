@@ -37,6 +37,7 @@ AWS Solutions Associate
     - Partition – spreads your instances across logical partitions. Typically used by large distributed and replicated workloads, such as Hadoop, Cassandra, and Kafka.
     - Spread – strictly places a small group of instances across distinct underlying hardware
 * Elastic IP - mask failure by rapidly remapping the address to another instance in your account
+* Elastic Fabric Adapters (EFAs) can be attached to an EC2 for HPC (high performance computing)
 # AWS Lambda
 * Lambda layers can be used to pull libraries/dependencies (up to 5 layers)
 * Lambda can be deployed as containers
@@ -104,8 +105,12 @@ AWS Solutions Associate
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
 * AWS Security Token Service - temporary credentials
 * AWS Certificate Manager (ACM) handles SSL/TLS
+* Service control policies (SCPs) - a type of organization policy used to define maximum available permissions for all accounts in your organization
+* AWS Config - shows you resource configurations and changes
 # Other Services
 * Amazon Kendra - add search services
 * Amazon Polly - turns text into speech
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
+* AWS Systems Manager - manage resources/infra. In particular, parameter store lets you store variables (and can encrpyt with KMS)
+* AWS Secrets Manager - manage, retrieve, and rotate database credentials, API keys, and other secrets
