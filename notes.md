@@ -66,6 +66,7 @@ AWS Solutions Associate
 * Legal holds are indefinite locks that supercede retention periods
 * DataSync - Migrate on-premises data to AWS
 * Storage Gateway - create hybrid storage solution
+* Amazon S3 server access logs provide more detail than CloudTrail
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -89,10 +90,12 @@ AWS Solutions Associate
 * VPC Peering - connect different VPCs together (not transitive)
 * Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
 * AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
-* AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible)
+* AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible) (can use AnyCast IP)
 * VPC Sharing - share subnets with other accounts
 * Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships.
 * AWS Control Tower - handles security of multiple accounts and services
+* AWS Flow Logs show activity on a VPC
+* Use an AWS NAT gateway to enable instances in a private subnet to connect to the internet (or AWS services) but prevent the internet from connecting to them
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
@@ -114,3 +117,14 @@ AWS Solutions Associate
 * AWS Prometheus - monitoring and alerting service for containers
 * AWS Systems Manager - manage resources/infra. In particular, parameter store lets you store variables (and can encrpyt with KMS)
 * AWS Secrets Manager - manage, retrieve, and rotate database credentials, API keys, and other secrets
+* AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
+* RAID 0 - higher performance, RAID 1 - higher redundancy
+* AWS Application Migration Service (AWS MGN) is the primary migration service recommended for lift-and-shift migrations. Replaces CloudEndure and SMS
+* AWS Application Discovery Service - track the migration status of your on-premises applications from the Migration Hub
+* Network Load Balancer - used to handle UDPT / TCP (Layer 4) while ALB is HTTP/HTTPS (Layer 7)
+* AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
+* AWS Step Functions - write state machines in JSON
+* EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
+* EBS: Magentic volumes offer lowest storage cost (HDD)
+* AWS Service Catalog - used to manage catalogs of IT services from virtual machine images, servers, software, databases, and other resources
+* AWS Resource Access Manager (AWS RAM) - used to share resources across accounts in an AWS organization
