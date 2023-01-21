@@ -19,6 +19,7 @@ AWS Solutions Associate
     ]
     "Principal": XXX,
 }
+* IAM roles are global
 # EC2 Instances
 * User Data: On boot code to run (default : not on restart)
 * Public IP can change on stop and start (Private IP stays the same)
@@ -49,6 +50,9 @@ AWS Solutions Associate
 * Amazon Redshift Spectrum - get data from S3 without importing
 * DynamoDB Accelerator (DAX) is a cache for DynamoDB
 * Enhanced monitoring is a feature of RDS
+* Relational DBs are best for ACID / OLAP
+* Redshift - OLAP, Aurora - OLTP
+* Aurora is a relational DB
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -67,6 +71,7 @@ AWS Solutions Associate
 * DataSync - Migrate on-premises data to AWS
 * Storage Gateway - create hybrid storage solution
 * Amazon S3 server access logs provide more detail than CloudTrail
+* Must wait 30 days before one can transfer to IA or One Zone IA
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -116,6 +121,7 @@ AWS Solutions Associate
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
 * AWS Systems Manager - manage resources/infra. In particular, parameter store lets you store variables (and can encrpyt with KMS)
+* AWS Systems Manager Run Command - lets you remotely and securely manage configuration
 * AWS Secrets Manager - manage, retrieve, and rotate database credentials, API keys, and other secrets
 * AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
 * RAID 0 - higher performance, RAID 1 - higher redundancy
@@ -128,3 +134,9 @@ AWS Solutions Associate
 * EBS: Magentic volumes offer lowest storage cost (HDD)
 * AWS Service Catalog - used to manage catalogs of IT services from virtual machine images, servers, software, databases, and other resources
 * AWS Resource Access Manager (AWS RAM) - used to share resources across accounts in an AWS organization
+* AWS Trusted Advisor can be used to monitor service limits
+* Equal Cost Multipath (ECMP), which is supported for Site-to-Site VPN connections on a transit gateway, creates multiple tunnels
+* AWS X-Ray - APM for your AWS services 
+* AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
+* Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
+* NFS and SMB - File Gateway, iSCSI - Volume Gateway
