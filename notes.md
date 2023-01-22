@@ -41,9 +41,11 @@ AWS Solutions Associate
 # AWS Lambda
 * Lambda layers can be used to pull libraries/dependencies (up to 5 layers)
 * Lambda can be deployed as containers
-# Elastic File System
+* Run for 15 minutes max
+# Elastic File System (EFS)
 * Bursting: Throughput scales with system size
 * Provisioned: Throughput fixed at specified amount
+* Amazon FSx for Lustre - HPC POSIX interface with input and output stored on S3 
 # Amazon DBs
 * Aurora has a reader endpoint (load balancing) and writer endpoint (changes if new db is promoted)
 * Amazon Redshift Spectrum - get data from S3 without importing
@@ -51,7 +53,12 @@ AWS Solutions Associate
 * Enhanced monitoring is a feature of RDS
 * Relational DBs are best for ACID / OLAP
 * Redshift - OLAP, Aurora - OLTP
-* Aurora is a relational DB
+* Aurora is a relational DB (performance in under a second)
+* IAM DB authentication is available for MySQL and PostgreSQL. Use a short-lived token. This method provides SSL traffic
+* Multi-AZ RDS is synchronous
+* Aurora has 6 copies in 3 AZs. Aurora read replicas are asynchronous
+* DynamoDB supports single-digit millisecond response times at any scale
+* RDS Read Replicas - asynchronous replication in seconds
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -71,11 +78,13 @@ AWS Solutions Associate
 * Storage Gateway - create hybrid storage solution
 * Amazon S3 server access logs provide more detail than CloudTrail
 * Must wait 30 days before one can transfer to IA or One Zone IA
+* Amazon S3 File Gateway - file interface that enables you to store files using NFS and SMB file protocols, and access those files via NFS/SMB/S3
 # EBS Storage
 * EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
 * EBS: Magentic volumes offer lowest storage cost (HDD)
 * RAID 0 - higher performance, RAID 1 - higher redundancy
 * EBS Multi-Attach is limited to 16 instances
+* Encryption by default is a regional setting. You cannot encrpyt unencrypted volumes (must create a new one)
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -92,7 +101,6 @@ AWS Solutions Associate
 # VPC
 * VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
 * Gateway endpoints can only run S3 and DynamoDB
-* NAT gateways replaced NAT instances
 * Default NACL allows everything
 * Clients connect to a defined port and get a response on an ephermal port
 * To access an S3 bucket, Gateway Endpoint is preferred over Instance Endpoint (unless on-prem resources)
@@ -100,10 +108,16 @@ AWS Solutions Associate
 * Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
 * AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
 * AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible) (can use AnyCast IP)
+* Cross-zone load balancing - allows traffic to be distributed other than 50/50 to handle different number of instances in each AZ
 * VPC Sharing - share subnets with other accounts
 * Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships.
 * AWS Flow Logs show activity on a VPC
+* NAT gateways replaced NAT instances (more avaliable)
 * Use an AWS NAT gateway to enable instances in a private subnet to connect to the internet (or AWS services) but prevent the internet from connecting to them
+    - NAT gateways replaced NAT instances (more avaliable), although NAT instances have the same functionality above
+    - Egress-Only Internet Gateway - same functionality above but for IPv6
+* Amazon API Gateway - acts as "front door" and can throttle requests as needed
+* Internet Gateway - used to provide internet access to your instances in the *public* subnet of your VPC
 # Disaster Recovery
 * Four Types of Disaster Recovery:
     - Backup and Restore
@@ -112,14 +126,17 @@ AWS Solutions Associate
     - Multi-Site
 # Security
 * AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
+* Amazon Detective - uses logs and machine learning (ML) to highlight potential security issues (integrates with GuardDuty)
 * AWS Shield is used to protect against DDoS
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
 * Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
 * Service control policies (SCPs) - a type of organization policy used to define maximum available permissions for all accounts in your organization
 * AWS Control Tower - handles security of multiple accounts and services
+* Symmetric key - same key encrypt and decrypt. Asymmetric key - public key to encrypt and private to decrypt
+* Use identity federation in AWS via: AWS IAM Identity Center (successor to AWS SSO) or AWS IAM
 # AWS Keys
 * AWS Security Token Service (STS) - temporary credentials
-* AWS Certificate Manager (ACM) handles SSL/TLS
+* AWS Certificate Manager (ACM) handles SSL/TLS and can generate AWS Health Events
 * CloudHSM (Hardware Security Module) - A more controllable KMS (can delete keys forever)
 # Cloud Managers
 * AWS Config - shows you resource configurations and changes
@@ -131,6 +148,11 @@ AWS Solutions Associate
 # Other Services
 * Amazon Kendra - add search services
 * Amazon Polly - turns text into speech
+* Amazon Comprehend - understands the content of text. Has a specialty for medical
+* Amazon Textract - extract text from documents (optical character recognition (OCR))
+* Amazon Lex - have a conversation just like Alexa (commonly used for chatbots)
+* Amazon Rekognition - identify patterns in pictures/videos
+* AWS Connect - call center via AWS
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
 * AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
@@ -140,7 +162,14 @@ AWS Solutions Associate
 * AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
 * AWS Step Functions - write state machines in JSON
 * AWS Trusted Advisor can be used to monitor service limits
+* AWS Pinpoint - used to run simple campaigns
 * Equal Cost Multipath (ECMP), which is supported for Site-to-Site VPN connections on a transit gateway, creates multiple tunnels
 * AWS X-Ray - APM for your AWS services 
 * AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
 * NFS and SMB - File Gateway, iSCSI - Volume Gateway
+* AWS Sagemaker - create and train machine learning algorithms
+* Amazon Managed Granafa - open-source analytics to query, visualize, and alert on your metrics, logs, and traces
+* Users need access keys to utilize the AWS CLI
+* AWS Audit Manager - simplify compliance with regulations and industry standards
+* Amazon S3 Storage Lens - use for organization-wide visibility into S3 usage and activity
+* CloudWatch logs agent needs to be installed on EC2 instances
