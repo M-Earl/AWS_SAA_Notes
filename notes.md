@@ -72,6 +72,10 @@ AWS Solutions Associate
 * Storage Gateway - create hybrid storage solution
 * Amazon S3 server access logs provide more detail than CloudTrail
 * Must wait 30 days before one can transfer to IA or One Zone IA
+# EBS Storage
+* EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
+* EBS: Magentic volumes offer lowest storage cost (HDD)
+* RAID 0 - higher performance, RAID 1 - higher redundancy
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
@@ -111,33 +115,32 @@ AWS Solutions Associate
 * AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
 * AWS Shield is used to protect against DDoS
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
-* AWS Security Token Service - temporary credentials
-* AWS Certificate Manager (ACM) handles SSL/TLS
+* Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
 * Service control policies (SCPs) - a type of organization policy used to define maximum available permissions for all accounts in your organization
+# AWS Keys
+* AWS Security Token Service (STS) - temporary credentials
+* AWS Certificate Manager (ACM) handles SSL/TLS
+* CloudHSM (Hardware Security Module) - A more controllable KMS (can delete keys forever)
+# Cloud Managers
 * AWS Config - shows you resource configurations and changes
+* AWS Secrets Manager - manage, retrieve, and rotate database credentials, API keys, and other secrets
+    - AWS Systems Manager Parameter Store - lets you store variables (and can encrpyt with KMS)
+    - AWS Systems Manager Run Command - lets you remotely and securely manage configuration
+* AWS Service Catalog - used to manage catalogs of IT services from virtual machine images, servers, software, databases, and other resources
+* AWS Resource Access Manager (AWS RAM) - used to share resources across accounts in an AWS organization
 # Other Services
 * Amazon Kendra - add search services
 * Amazon Polly - turns text into speech
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
-* AWS Systems Manager - manage resources/infra. In particular, parameter store lets you store variables (and can encrpyt with KMS)
-* AWS Systems Manager Run Command - lets you remotely and securely manage configuration
-* AWS Secrets Manager - manage, retrieve, and rotate database credentials, API keys, and other secrets
 * AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
-* RAID 0 - higher performance, RAID 1 - higher redundancy
 * AWS Application Migration Service (AWS MGN) is the primary migration service recommended for lift-and-shift migrations. Replaces CloudEndure and SMS
 * AWS Application Discovery Service - track the migration status of your on-premises applications from the Migration Hub
 * Network Load Balancer - used to handle UDPT / TCP (Layer 4) while ALB is HTTP/HTTPS (Layer 7)
 * AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
 * AWS Step Functions - write state machines in JSON
-* EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
-* EBS: Magentic volumes offer lowest storage cost (HDD)
-* AWS Service Catalog - used to manage catalogs of IT services from virtual machine images, servers, software, databases, and other resources
-* AWS Resource Access Manager (AWS RAM) - used to share resources across accounts in an AWS organization
 * AWS Trusted Advisor can be used to monitor service limits
 * Equal Cost Multipath (ECMP), which is supported for Site-to-Site VPN connections on a transit gateway, creates multiple tunnels
 * AWS X-Ray - APM for your AWS services 
 * AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
-* Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
 * NFS and SMB - File Gateway, iSCSI - Volume Gateway
-* CloudHSM (Hardware Security Module) - A more controllable KMS (can delete keys forever)
