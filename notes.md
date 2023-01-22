@@ -102,7 +102,6 @@ AWS Solutions Associate
 * AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible) (can use AnyCast IP)
 * VPC Sharing - share subnets with other accounts
 * Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships.
-* AWS Control Tower - handles security of multiple accounts and services
 * AWS Flow Logs show activity on a VPC
 * Use an AWS NAT gateway to enable instances in a private subnet to connect to the internet (or AWS services) but prevent the internet from connecting to them
 # Disaster Recovery
@@ -117,6 +116,7 @@ AWS Solutions Associate
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
 * Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
 * Service control policies (SCPs) - a type of organization policy used to define maximum available permissions for all accounts in your organization
+* AWS Control Tower - handles security of multiple accounts and services
 # AWS Keys
 * AWS Security Token Service (STS) - temporary credentials
 * AWS Certificate Manager (ACM) handles SSL/TLS
