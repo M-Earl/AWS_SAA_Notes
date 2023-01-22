@@ -140,3 +140,4 @@ AWS Solutions Associate
 * AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
 * Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
 * NFS and SMB - File Gateway, iSCSI - Volume Gateway
+* CloudHSM (Hardware Security Module) - A more controllable KMS (can delete keys forever)
