@@ -31,7 +31,6 @@ AWS Solutions Associate
     - 443: HTTPS
     - 3389: RDP (Remote Desktop Protocol Windows)
 * Security lists only allow traffic
-* EBS Multi-Attach is limited to 16 instances
 * Launch templates supercede launch configurations (more features). Launch templates are immutable and allow versions
 * EC2 placement groups:
     - Cluster – packs instances close together inside an Availability Zone. Low-latency, HPC
@@ -76,6 +75,7 @@ AWS Solutions Associate
 * EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
 * EBS: Magentic volumes offer lowest storage cost (HDD)
 * RAID 0 - higher performance, RAID 1 - higher redundancy
+* EBS Multi-Attach is limited to 16 instances
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
