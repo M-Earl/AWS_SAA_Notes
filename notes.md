@@ -38,6 +38,9 @@ AWS Solutions Associate
     - Spread – strictly places a small group of instances across distinct underlying hardware
 * Elastic IP - mask failure by rapidly remapping the address to another instance in your account
 * Elastic Fabric Adapters (EFAs) can be attached to an EC2 for HPC (high performance computing)
+# Load Balancers
+* Network Load Balancer - used to handle UDPT / TCP (Layer 4) while ALB is HTTP/HTTPS (Layer 7)
+* * Cross-zone load balancing - allows traffic to be distributed other than 50/50 to handle different number of instances in each AZ
 # AWS Lambda
 * Lambda layers can be used to pull libraries/dependencies (up to 5 layers)
 * Lambda can be deployed as containers
@@ -108,9 +111,9 @@ AWS Solutions Associate
 * Direct Connect - establishes a dedicated connection from on-premises to AWS. Takes months to set up
 * AWS Site-to-Site VPN - connect on-premises network to your Amazon VPC (AWS side: virtual private gateway, client side: customer gateway)
 * AWS Global Accelerator - provides a fixed entry point to ALBs, NLBs, Elastic IPs, or EC2s (multi-region compatible) (can use AnyCast IP)
-* Cross-zone load balancing - allows traffic to be distributed other than 50/50 to handle different number of instances in each AZ
 * VPC Sharing - share subnets with other accounts
-* Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships.
+* Transit Gateway - connects VPCs and on-premises networks through a central hub. Eliminates complex peering relationships
+    - Equal Cost Multipath (ECMP), which is supported for Site-to-Site VPN connections on a transit gateway, creates multiple tunnels
 * AWS Flow Logs show activity on a VPC
 * NAT gateways replaced NAT instances (more avaliable)
 * Use an AWS NAT gateway to enable instances in a private subnet to connect to the internet (or AWS services) but prevent the internet from connecting to them
@@ -145,31 +148,31 @@ AWS Solutions Associate
     - AWS Systems Manager Run Command - lets you remotely and securely manage configuration
 * AWS Service Catalog - used to manage catalogs of IT services from virtual machine images, servers, software, databases, and other resources
 * AWS Resource Access Manager (AWS RAM) - used to share resources across accounts in an AWS organization
-# Other Services
-* Amazon Kendra - add search services
+# AWS Machine Learning Services
 * Amazon Polly - turns text into speech
 * Amazon Comprehend - understands the content of text. Has a specialty for medical
 * Amazon Textract - extract text from documents (optical character recognition (OCR))
 * Amazon Lex - have a conversation just like Alexa (commonly used for chatbots)
 * Amazon Rekognition - identify patterns in pictures/videos
+* AWS Sagemaker - create and train machine learning algorithms
+# Other Services
+* Amazon Kendra - add search services
 * AWS Connect - call center via AWS
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
 * AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
 * AWS Application Migration Service (AWS MGN) is the primary migration service recommended for lift-and-shift migrations. Replaces CloudEndure and SMS
 * AWS Application Discovery Service - track the migration status of your on-premises applications from the Migration Hub
-* Network Load Balancer - used to handle UDPT / TCP (Layer 4) while ALB is HTTP/HTTPS (Layer 7)
 * AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
 * AWS Step Functions - write state machines in JSON
 * AWS Trusted Advisor can be used to monitor service limits
 * AWS Pinpoint - used to run simple campaigns
-* Equal Cost Multipath (ECMP), which is supported for Site-to-Site VPN connections on a transit gateway, creates multiple tunnels
-* AWS X-Ray - APM for your AWS services 
+a* AWS X-Ray - APM for your AWS services 
 * AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
 * NFS and SMB - File Gateway, iSCSI - Volume Gateway
-* AWS Sagemaker - create and train machine learning algorithms
 * Amazon Managed Granafa - open-source analytics to query, visualize, and alert on your metrics, logs, and traces
 * Users need access keys to utilize the AWS CLI
 * AWS Audit Manager - simplify compliance with regulations and industry standards
 * Amazon S3 Storage Lens - use for organization-wide visibility into S3 usage and activity
 * CloudWatch logs agent needs to be installed on EC2 instances
+* Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
