@@ -176,3 +176,5 @@ a* AWS X-Ray - APM for your AWS services
 * Amazon S3 Storage Lens - use for organization-wide visibility into S3 usage and activity
 * CloudWatch logs agent needs to be installed on EC2 instances
 * Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
+* CloudFormation by default deletes all objects that don't have a DeletionPolicy specified except S3 buckets (with objects in them) and RDS (snapshots)
+* For DynamoDB, RCU (read capacity units) are 4 KB and WCU (write capacity units) are 1 KB. Transactional read and writes require double
