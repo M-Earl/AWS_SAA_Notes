@@ -130,6 +130,7 @@ AWS Solutions Associate
 # Security
 * AWS GuardDuty monitors activity found in AWS CloudTrail Events, Amazon VPC Flow Logs, and DNS Logs
 * Amazon Detective - uses logs and machine learning (ML) to highlight potential security issues (integrates with GuardDuty)
+* Amazon Inspector - test reachability and security of EC2 instances
 * AWS Shield is used to protect against DDoS
 * AWS Network Firewall - protect VPCs, AWS WAF - protect HTTP, LBs, API Gateway, CloudFront
 * Network Access Analyzer - VPC feature that reports on unintended access to your AWS resources
@@ -178,3 +179,5 @@ a* AWS X-Ray - APM for your AWS services
 * Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
 * CloudFormation by default deletes all objects that don't have a DeletionPolicy specified except S3 buckets (with objects in them) and RDS (snapshots)
 * For DynamoDB, RCU (read capacity units) are 4 KB and WCU (write capacity units) are 1 KB. Transactional read and writes require double
+* Amazon Cognito User Pool - provides profiles to users, Cognito Identity Pool - provides AWS credentials to access resources
+* AWS Server Migration Service - recommended to use AWS Application Migration Service (AWS MGN) instead, successor to Amazon EC2 VM Import service
