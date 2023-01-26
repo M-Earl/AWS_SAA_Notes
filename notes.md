@@ -62,6 +62,7 @@ AWS Solutions Associate
 * Aurora has 6 copies in 3 AZs. Aurora read replicas are asynchronous
 * DynamoDB supports single-digit millisecond response times at any scale
 * RDS Read Replicas - asynchronous replication in seconds
+* For DynamoDB, RCU (read capacity units) are 4 KB and WCU (write capacity units) are 1 KB. Transactional read and writes require double
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -82,6 +83,7 @@ AWS Solutions Associate
 * Amazon S3 server access logs provide more detail than CloudTrail
 * Must wait 30 days before one can transfer to IA or One Zone IA
 * Amazon S3 File Gateway - file interface that enables you to store files using NFS and SMB file protocols, and access those files via NFS/SMB/S3
+* Amazon S3 Storage Lens - use for organization-wide visibility into S3 usage and activity
 # EBS Storage
 * EBS: The maximum ratio of provisioned IOPS to the requested volume size (in GiB) is 50:1
 * EBS: Magentic volumes offer lowest storage cost (HDD)
@@ -101,6 +103,10 @@ AWS Solutions Associate
 * Kinesis Data Firehose writes to S3, Redshift, Elasticsearch, HTTP or 3rd party apps (datadog, splunk, etc)
 * Kinesis Data Streams - applications consume data streams (for example, containers or lambda) (1/MB/s/shard in, 2 MB/s/shard out unless fan-out)
 * A single Kinesis Data Stream shard shard can ingest up to 1 MB of data per second (including partition keys) or 1,000 records per second for writes
+# Other Amazon Data Flows
+* Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
+* AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
+* AWS Step Functions - write state machines in JSON
 # VPC
 * VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
 * Gateway endpoints can only run S3 and DynamoDB
@@ -138,6 +144,7 @@ AWS Solutions Associate
 * AWS Control Tower - handles security of multiple accounts and services
 * Symmetric key - same key encrypt and decrypt. Asymmetric key - public key to encrypt and private to decrypt
 * Use identity federation in AWS via: AWS IAM Identity Center (successor to AWS SSO) or AWS IAM
+* Amazon Cognito User Pool - provides profiles to users, Cognito Identity Pool - provides AWS credentials to access resources
 # AWS Keys
 * AWS Security Token Service (STS) - temporary credentials
 * AWS Certificate Manager (ACM) handles SSL/TLS and can generate AWS Health Events
@@ -156,28 +163,23 @@ AWS Solutions Associate
 * Amazon Lex - have a conversation just like Alexa (commonly used for chatbots)
 * Amazon Rekognition - identify patterns in pictures/videos
 * AWS Sagemaker - create and train machine learning algorithms
+# Creating AWS Resources
+* AWS Application Migration Service (AWS MGN) is the primary migration service recommended for lift-and-shift migrations. Replaces CloudEndure and SMS
+* AWS Application Discovery Service - track the migration status of your on-premises applications from the Migration Hub
+* CloudFormation by default deletes all objects that don't have a DeletionPolicy specified except S3 buckets (with objects in them) and RDS (snapshots)
+* AWS Server Migration Service - recommended to use AWS Application Migration Service (AWS MGN) instead, successor to Amazon EC2 VM Import service
 # Other Services
 * Amazon Kendra - add search services
 * AWS Connect - call center via AWS
 * AWS Proton - deploy containers
 * AWS Prometheus - monitoring and alerting service for containers
 * AWS EMR - PB data processing, analytics and machine learning (Apache Spark, Apache Hive, Presto)
-* AWS Application Migration Service (AWS MGN) is the primary migration service recommended for lift-and-shift migrations. Replaces CloudEndure and SMS
-* AWS Application Discovery Service - track the migration status of your on-premises applications from the Migration Hub
-* AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
-* AWS Step Functions - write state machines in JSON
 * AWS Trusted Advisor can be used to monitor service limits
 * AWS Pinpoint - used to run simple campaigns
-a* AWS X-Ray - APM for your AWS services 
+* AWS X-Ray - APM for your AWS services 
 * AWS AppSync is a serverless GraphQL and Pub/Sub API service to build applications
 * NFS and SMB - File Gateway, iSCSI - Volume Gateway
 * Amazon Managed Granafa - open-source analytics to query, visualize, and alert on your metrics, logs, and traces
 * Users need access keys to utilize the AWS CLI
 * AWS Audit Manager - simplify compliance with regulations and industry standards
-* Amazon S3 Storage Lens - use for organization-wide visibility into S3 usage and activity
 * CloudWatch logs agent needs to be installed on EC2 instances
-* Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
-* CloudFormation by default deletes all objects that don't have a DeletionPolicy specified except S3 buckets (with objects in them) and RDS (snapshots)
-* For DynamoDB, RCU (read capacity units) are 4 KB and WCU (write capacity units) are 1 KB. Transactional read and writes require double
-* Amazon Cognito User Pool - provides profiles to users, Cognito Identity Pool - provides AWS credentials to access resources
-* AWS Server Migration Service - recommended to use AWS Application Migration Service (AWS MGN) instead, successor to Amazon EC2 VM Import service
