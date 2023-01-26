@@ -63,6 +63,7 @@ AWS Solutions Associate
 * DynamoDB supports single-digit millisecond response times at any scale
 * RDS Read Replicas - asynchronous replication in seconds
 * For DynamoDB, RCU (read capacity units) are 4 KB and WCU (write capacity units) are 1 KB. Transactional read and writes require double
+* RDS Proxy can increase connections on database
 # Route 53
 * A - hostname to IPv4
 * AAAA - hostname to IPv6
@@ -105,7 +106,7 @@ AWS Solutions Associate
 * A single Kinesis Data Stream shard shard can ingest up to 1 MB of data per second (including partition keys) or 1,000 records per second for writes
 # Other Amazon Data Flows
 * Amazon AppFlow - automate data flows between SaaS applications (for example, Salesforce) and AWS
-* AWS Simple Workflow Service - used to aid distributed workflows (more particular than step functions)
+* AWS Simple Workflow Service (SWF) - used to aid distributed workflows (more particular than step functions)
 * AWS Step Functions - write state machines in JSON
 # VPC
 * VPC endpoints are used to connect AWS --> AWS (powered by AWS PrivateLink)
