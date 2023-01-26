@@ -40,7 +40,7 @@ AWS Solutions Associate
 * Elastic Fabric Adapters (EFAs) can be attached to an EC2 for HPC (high performance computing)
 # Load Balancers
 * Network Load Balancer - used to handle UDPT / TCP (Layer 4) while ALB is HTTP/HTTPS (Layer 7)
-* * Cross-zone load balancing - allows traffic to be distributed other than 50/50 to handle different number of instances in each AZ
+    - Cross-zone load balancing - allows traffic to be distributed other than 50/50 to handle different number of instances in each AZ
 # AWS Lambda
 * Lambda layers can be used to pull libraries/dependencies (up to 5 layers)
 * Lambda can be deployed as containers
@@ -80,6 +80,7 @@ AWS Solutions Associate
 * In governance mode, users need special permissions to overwrite. In compliance mode, a specified object can’t be overwritten by any user
 * Legal holds are indefinite locks that supercede retention periods
 * DataSync - Migrate on-premises data to AWS
+    - Maintains metadata
 * Storage Gateway - create hybrid storage solution
 * Amazon S3 server access logs provide more detail than CloudTrail
 * Must wait 30 days before one can transfer to IA or One Zone IA
@@ -94,8 +95,6 @@ AWS Solutions Associate
 # CloudFront
 * CloudFront is great for static data in many places
 * S3 Cross Region Replication is great for dynamic data in a few places
-# DataSync
-* Maintains metadata
 # SQS and SNS
 * SQS can add filter policies on its subscribers
 * FIFO queues support up to 300 messages per second or 3,000 messages per second with batching
